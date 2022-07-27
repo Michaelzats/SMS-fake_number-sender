@@ -1,3 +1,6 @@
+#https://www.twilio.com/console/projects/summary get API
+
+
 import os
 from twilio.rest import Client
 
@@ -9,9 +12,9 @@ client = Client(account_sid, auth_token)
 
 
 message = client.messages.create(
-    body="I know where u live, Avni",
-    from_="+13252372522",
-    to="+49 157 52454992"
+    body="your text",
+    from_="number to send to",
+    to="Number to send from (the number you generated at Twilio)"
 )
 
 print(message.sid)
